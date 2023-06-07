@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 nav{
@@ -8,6 +9,7 @@ nav{
   height: 60px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.15);
   display: flex;
+  position: fixed;
 }
 
 nav .navbar a{
@@ -23,7 +25,7 @@ nav .navbar a{
   align-items: center;
   height: 60px;
   width: 270px;
-  background-color: rgba(43, 82, 103, 1);
+  background-color: rgba(52, 73, 94, 1);
 }
 
 .logo{
@@ -73,3 +75,74 @@ padding-right: 30%;
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color:rgba(52, 152, 219, 1);}
+
+
+.sidenav {
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 1);
+  overflow-x: hidden; 
+  position: fixed;
+  margin-top: 60px;
+}
+.container-side-content {
+  display: flex;
+  flex-direction: column;
+}
+.sidenav a {
+  padding: 8px 8px 10px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.side-content {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.side-content a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.side-content i {
+  margin-right: 10px;
+}
+
+.side-content:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-right-color:rgba(52, 152, 219, 1); 
+
+}
+
+.clock{
+  width: 100%;
+  height: 60px;
+  background-color: rgba(27, 118, 157, 1);
+  display: flex;
+}
+
+#clock-circle{
+  margin-left: 20px;
+  color: white;
+  font-size: 44px;
+  padding-top: 7px;
+}
+
+.Date{
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+  margin-left: 15px;
+}
+
