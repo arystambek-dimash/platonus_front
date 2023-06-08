@@ -5,7 +5,9 @@ const monthTime = document.getElementById('month')
 const currentTime = new Date();
 const weekdays = ["Воскресенье", "Пондельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-const buttons = document.getElementById('box-nav-a');
+const announcement = document.getElementById('announcement');
+const write  = document.getElementById('write')
+const news = document.getElementById('news')
 function getTime() {
     let hours = currentTime.getHours();
     let minutes = currentTime.getMinutes();
