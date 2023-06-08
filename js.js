@@ -3,9 +3,9 @@ const day = document.getElementById('day');
 const weekendDays = document.getElementById('weekday');
 const monthTime = document.getElementById('month')
 const currentTime = new Date();
-const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+const weekdays = ["Воскресенье", "Пондельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const buttons = document.getElementById('box-nav-a');
 function getTime() {
     let hours = currentTime.getHours();
     let minutes = currentTime.getMinutes();
@@ -37,3 +37,7 @@ function updateWeekdayAndDate() {
 
 
 
+  function changeColor(){
+    buttons.style.backgroundColor = '#3498D8';
+    buttons.style.color = 'white'
+}
