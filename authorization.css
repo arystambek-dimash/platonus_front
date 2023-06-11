@@ -1,0 +1,30 @@
+*{
+    background-color: rgba(231, 235, 238, 1);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.box-auth{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 200px 100px;
+}
+
+.logo{
+    width: 300px;
+    height: 50px;
+    background-image: url(img/platonus-logo-big.png);
+}
+
+.box-logo{
+    align-items:start;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(52, 73, 94, 1);
+
+}
