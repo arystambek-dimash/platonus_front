@@ -161,20 +161,84 @@ main {
 
 
 .box-message {
-  width: 100%;
-  height: 500px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 
-box-nav {
-  justify-content: space-around;
+.box-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.box-nav-a {
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #3498D8;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.box-nav-a.clicked {
+  background-color: #2675AC;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.main-box-body {
+  background-color: white;
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table thead th {
+  background-color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table td,
+.table th {
   padding: 20px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+tr.unread {
+  font-weight: bold;
+}
+
+a.filecabinetLink {
+  color: #3498D8;
+  text-decoration: none;
+}
+
+a.filecabinetLink:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498D8;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
 }
+
+.btn:hover {
+  background-color: #2675AC;
+}
+
 
 box-nav a {
   text-decoration: none;
@@ -185,9 +249,23 @@ box-nav a {
 
 box-nav a:hover {
   background-color: #ccc;
+  padding: 15px 15px 15px 15px;
+  border-radius: 5px;
 }
 
 
 a{
   color: #3498DB
 }
+
+
+.clicked {
+  background-color: #3498D8;
+  color: white;
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+}
+.clicked:hover{
+  background: #3498D8;
+}
+

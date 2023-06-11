@@ -5,9 +5,7 @@ const monthTime = document.getElementById('month')
 const currentTime = new Date();
 const weekdays = ["Воскресенье", "Пондельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-const announcement = document.getElementById('announcement');
-const write  = document.getElementById('write')
-const news = document.getElementById('news')
+
 function getTime() {
     let hours = currentTime.getHours();
     let minutes = currentTime.getMinutes();
@@ -37,9 +35,10 @@ function updateWeekdayAndDate() {
   setInterval(updateWeekdayAndDate, 86400000); 
   
 
-
-
-  function changeColor(){
-    buttons.style.backgroundColor = '#3498D8';
-    buttons.style.color = 'white'
+  function changeColor(element) {
+    var buttons = document.getElementsByClassName('box-nav-a');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('clicked');
+    }
+    element.classList.add('clicked');
 }

@@ -9,6 +9,7 @@
     <link rel = "icon" href = 
         "https://platonus.iitu.edu.kz/images/emblem.jpg"
     type = "image/x-icon">
+    
 </head>
 <body>
     <section>
@@ -69,10 +70,78 @@
         <div style="padding: 40px 0 0 0;">
             <div class="box-message">
                 <box-nav>
-                    <a id="box-nav-a announcement" onclick="changeColor()">Объявление</a>
-                    <a id="box-nav-a write" onclick="changeColor()">Письма</a>
-                    <a id="box-nav-a news" onclick="changeColor()">Новости МНВО РК</a>
+                    <a class="box-nav-a" onclick="changeColor(this)">Объявление</a>
+                    <a class="box-nav-a" onclick="changeColor(this)">Письма</a>
+                    <a class="box-nav-a" onclick="changeColor(this)">Новости МНВО РК</a>
                 </box-nav>
+                <div class="content">
+                    <div class="main-box-body clearfix">
+                        <div class="table-responsive">
+                          <table class="table table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th width="80px" class="messageLittleHeader">Дата</th>
+                                <th width="*" class="messageLittleHeader">Тема</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="unread">
+                                <td>
+                                  <span>11.06.23</span>
+                                </td>
+                                <td>
+                                  <a href="messageread?type=3&amp;id=237&amp;state=-1" class="filecabinetLink">
+                                    Расписание летнего семестра
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr class="unread">
+                                <td>
+                                  <span>07.06.23</span>
+                                </td>
+                                <td>
+                                  <a href="messageread?type=3&amp;id=232&amp;state=-1" class="filecabinetLink">
+                                    Расписания пересдач
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr class="unread">
+                                <td>
+                                  <span>02.06.23</span>
+                                </td>
+                                <td>
+                                  <a href="messageread?type=3&amp;id=230&amp;state=-1" class="filecabinetLink">
+                                    Регистрация на летний семестр 2022-2023 учебного года
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr class="unread">
+                                <td>
+                                  <span>02.06.23</span>
+                                </td>
+                                <td>
+                                  <a href="messageread?type=3&amp;id=225&amp;state=-1" class="filecabinetLink">
+                                    Инструкция на запись летнего семестр 2022-2023 учебного года
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr class="unread">
+                                <td>
+                                  <span>30.05.23</span>
+                                </td>
+                                <td>
+                                  <a href="messageread?type=3&amp;id=218&amp;state=-1" class="filecabinetLink">
+                                    Шаблоны заявлений на весеннюю экзаменационную сессию для печати и заполнения
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a href="mail?type=3" title="Перейти в раздел объявления" class="btn btn-primary">Подробнее...</a>
+                      </div>
+                      
+                </div>
             </div>
         </div>
     </main>
