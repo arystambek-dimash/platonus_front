@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="author.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-xs-12">
+        <div id="login-box">
+            <div class="row">
+                <div class="col-xs-12">
+                  <header id="login-header">
+                    <div id="login-logo">
+                      <img src="img/platonus-logo-big.png" alt="">
+                    </div>
+                    <div id="emblem" hidden="">
+                      <img src="images/emblem" alt="">
+                    </div>
+                  </header>
+                  <div id="login-box-inner">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-font"></i></span>
+                      <select class="form-control" name="language" id="language" onchange="onLanguageSelect()">
+                        <option value="1">Русский</option>
+                        <option value="2">Қазақша</option>
+                        <option value="3">English</option>
+                      </select>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                      <input class="form-control" type="text" name="login" required="" id="login_input" placeholder="Логин">
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                      <input type="password" class="form-control" required="" name="password" id="pass_input" placeholder="Пароль">
+                      <span class="field-icon"><i class="fa fa-eye" id="pass-status" onclick="viewPassword()"></i></span>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <button id="Submit1" name="Submit1" onclick="onSubmit()" class="btn btn-success col-xs-12">Войти</button>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-12" id="applicant_registration">
+                      <a href="registration.html">Регистрация абитуриентов</a>
+                    </div>
+                    <br>
+                    <div class="col-xs-12">
+                      <a id="forget" href="forget.html?language=1">Забыли пароль?</a>
+                    </div>
+                    <br><br>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      
+</body>
+</html>

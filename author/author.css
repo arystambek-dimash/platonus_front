@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  #login-box {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #login-logo img {
+    max-width: 100%;
+  }
+  
+  #emblem {
+    width: 348px;
+    height: 108px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #login-box-inner {
+    margin-top: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group-addon {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 8px 12px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .field-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .btn-success {
+    width: 100%;
+    padding: 10px;
+    background-color: #008080;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .btn-success:hover {
+    background-color: #006666;
+  }
+  
+  #applicant_registration,
+  #forget {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  #forget {
+    display: block;
+  }
+  
