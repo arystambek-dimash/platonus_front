@@ -1,61 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="author.css">
-    <title>Document</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="col-xs-12">
-        <div id="login-box">
-            <div class="row">
-                <div class="col-xs-12">
-                  <header id="login-header">
-                    <div id="login-logo">
-                      <img src="img/platonus-logo-big.png" alt="">
-                    </div>
-                    <div id="emblem" hidden="">
-                      <img src="images/emblem" alt="">
-                    </div>
-                  </header>
-                  <div id="login-box-inner">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-font"></i></span>
-                      <select class="form-control" name="language" id="language" onchange="onLanguageSelect()">
-                        <option value="1">Русский</option>
-                        <option value="2">Қазақша</option>
-                        <option value="3">English</option>
-                      </select>
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input class="form-control" type="text" name="login" required="" id="login_input" placeholder="Логин">
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                      <input type="password" class="form-control" required="" name="password" id="pass_input" placeholder="Пароль">
-                      <span class="field-icon"><i class="fa fa-eye" id="pass-status" onclick="viewPassword()"></i></span>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <button id="Submit1" name="Submit1" onclick="onSubmit()" class="btn btn-success col-xs-12">Войти</button>
-                      </div>
-                    </div>
-                    <br>
-                    <div class="col-xs-12" id="applicant_registration">
-                      <a href="registration.html">Регистрация абитуриентов</a>
-                    </div>
-                    <br>
-                    <div class="col-xs-12">
-                      <a id="forget" href="forget.html?language=1">Забыли пароль?</a>
-                    </div>
-                    <br><br>
-                  </div>
-                </div>
-              </div>
-        </div>
-      </div>
-      
+    <h1>Rock, Paper, Scissors</h1>
+    <p>Select either rock, paper, or scissors and see if you can beat the computer!</p>
+
+    <p><strong>Remember:</strong> “Rock breaks scissors, scissors cuts paper, paper covers rock.” </p>
+    <div class='score'>
+
+    </div>
+    <div class='message'>
+
+    </div>
+    <button type='button'>Rock</button>
+    <button type='button'>Paper</button>
+    <button type='button'>Scissors</button>
+    <script>
+        const message = document.querySelector('.message');
+        const score = document.querySelector('.score');
+        const buttons = document.querySelectorAll('button');
+        const winnerScores = [0,0];
+        
+        //add event listeners to buttons
+        for ( let i = 0 ; i < buttons.length ; i++){
+            buttons[i].addEventListener('click', playGame);
+        }
+
+        function playGame(e){
+            //setup player's selection
+            let playerSelection = e.target.innerText;
+            //setup a random number to select for computer
+            //selects a number between 0 and 1 (1 not-inclusive)
+            let computerSelection = Math.random();
+
+            //if computerSelection is less than .34, computer selects Rock
+            if (computerSelection < .34){
+                computerSelection = 'Rock';
+            } else if (computerSelection <= .67){
+                computerSelection = 'Paper';
+            } else {
+                computerSelection = 'Scissors';
+            }
+            
+            //setup a function to compare winners and return result
+            let result = checkWinner(playerSelection, computerSelection);
+
+            //output scores to the DOM
+            if (result === 'Player'){
+                result += ' wins!';
+                //update score
+                winnerScores[0]++;
+            }
+
+            if (result === 'Computer'){
+                result += ' wins!';
+                winnerScores[1]++;
+            }
+
+            if (result === 'Draw'){
+                result += '. It\'s a tie!'
+            }
+
+            //output score into Score DIV
+            score.innerHTML = 'Player: [ ' + winnerScores[0]+ ' ] Computer: [ ' + winnerScores[1] + ' ]';
+
+            //output player and computer's selections
+            messenger('Player: <strong>' + playerSelection + '</strong> Computer: <strong>' + computerSelection + '</strong><br>' + result);
+        }
+
+        function messenger(selectionMessage){
+            message.innerHTML = selectionMessage;
+        }
+
+        function checkWinner(player, computer){
+            if (player === computer){
+                return 'Draw';
+            }
+
+            if (player === 'Rock'){
+                if(computer === 'Paper'){
+                    return 'Computer';
+                } else {
+                    return 'Player';
+                }
+            }
+            sfsdfdsf
+
+            if (player === 'Paper'){
+                if (computer === 'Scissors'){
+                    return 'Computer';
+                } else {
+                    return 'Player';
+                }
+            }
+
+            if (player === 'Scissors'){
+                if (computer === 'Rock'){
+                    return 'Computer';
+                } else {
+                    return 'Player';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
